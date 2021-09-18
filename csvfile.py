@@ -29,7 +29,8 @@ try:
             print(readcsv) 
             
 # Create new CSV file with only two column if file not exist
-            
+# If result.csv file is not exist then this block is run and create new csv file which have only two columns Order date and sales 
+# with the decending sorting (recent first) 
 except:
     df.to_csv("result.csv" , sep=',' , )
     df.sort_values(by="Order Date")
